@@ -14,6 +14,9 @@
 		D3EBA76C1B5D8FF800F6A203 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = D3EBA76B1B5D8FF800F6A203 /* Images.xcassets */; };
 		D3EBA76F1B5D8FF800F6A203 /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = D3EBA76D1B5D8FF800F6A203 /* LaunchScreen.xib */; };
 		D3EBA77B1B5D8FF800F6A203 /* EnvoyerTests.m in Sources */ = {isa = PBXBuildFile; fileRef = D3EBA77A1B5D8FF800F6A203 /* EnvoyerTests.m */; };
+		D3EBA7861B5D929100F6A203 /* LetterStackTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = D3EBA7851B5D929100F6A203 /* LetterStackTableViewCell.m */; };
+		D3EBA7891B5D92C400F6A203 /* LetterStackView.m in Sources */ = {isa = PBXBuildFile; fileRef = D3EBA7881B5D92C400F6A203 /* LetterStackView.m */; };
+		D3EBA78C1B5D967800F6A203 /* Helper.m in Sources */ = {isa = PBXBuildFile; fileRef = D3EBA78B1B5D967800F6A203 /* Helper.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -40,6 +43,12 @@
 		D3EBA7741B5D8FF800F6A203 /* EnvoyerTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = EnvoyerTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		D3EBA7791B5D8FF800F6A203 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		D3EBA77A1B5D8FF800F6A203 /* EnvoyerTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = EnvoyerTests.m; sourceTree = "<group>"; };
+		D3EBA7841B5D929100F6A203 /* LetterStackTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LetterStackTableViewCell.h; sourceTree = "<group>"; };
+		D3EBA7851B5D929100F6A203 /* LetterStackTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LetterStackTableViewCell.m; sourceTree = "<group>"; };
+		D3EBA7871B5D92C400F6A203 /* LetterStackView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LetterStackView.h; sourceTree = "<group>"; };
+		D3EBA7881B5D92C400F6A203 /* LetterStackView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LetterStackView.m; sourceTree = "<group>"; };
+		D3EBA78A1B5D967800F6A203 /* Helper.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Helper.h; sourceTree = "<group>"; };
+		D3EBA78B1B5D967800F6A203 /* Helper.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Helper.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -86,6 +95,12 @@
 				D3EBA7651B5D8FF800F6A203 /* ViewController.h */,
 				D3EBA7661B5D8FF800F6A203 /* ViewController.m */,
 				D3EBA7681B5D8FF800F6A203 /* Main.storyboard */,
+				D3EBA7841B5D929100F6A203 /* LetterStackTableViewCell.h */,
+				D3EBA7851B5D929100F6A203 /* LetterStackTableViewCell.m */,
+				D3EBA7871B5D92C400F6A203 /* LetterStackView.h */,
+				D3EBA7881B5D92C400F6A203 /* LetterStackView.m */,
+				D3EBA78A1B5D967800F6A203 /* Helper.h */,
+				D3EBA78B1B5D967800F6A203 /* Helper.m */,
 				D3EBA76B1B5D8FF800F6A203 /* Images.xcassets */,
 				D3EBA76D1B5D8FF800F6A203 /* LaunchScreen.xib */,
 				D3EBA75E1B5D8FF800F6A203 /* Supporting Files */,
@@ -220,8 +235,11 @@
 			buildActionMask = 2147483647;
 			files = (
 				D3EBA7671B5D8FF800F6A203 /* ViewController.m in Sources */,
+				D3EBA78C1B5D967800F6A203 /* Helper.m in Sources */,
 				D3EBA7641B5D8FF800F6A203 /* AppDelegate.m in Sources */,
+				D3EBA7861B5D929100F6A203 /* LetterStackTableViewCell.m in Sources */,
 				D3EBA7611B5D8FF800F6A203 /* main.m in Sources */,
+				D3EBA7891B5D92C400F6A203 /* LetterStackView.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -347,9 +365,11 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_IDENTITY = "iPhone Developer: Zach Whelchel (2AS274DVPG)";
 				INFOPLIST_FILE = Envoyer/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE = "858f7b3d-ce01-4a1b-a42d-6446358270bd";
 			};
 			name = Debug;
 		};
@@ -357,9 +377,11 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_IDENTITY = "iPhone Developer: Zach Whelchel (2AS274DVPG)";
 				INFOPLIST_FILE = Envoyer/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE = "858f7b3d-ce01-4a1b-a42d-6446358270bd";
 			};
 			name = Release;
 		};
