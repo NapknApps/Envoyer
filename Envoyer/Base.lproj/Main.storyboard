@@ -57,12 +57,22 @@
                                     <outlet property="delegate" destination="vXZ-lx-hvc" id="kNY-HA-2i8"/>
                                 </connections>
                             </tableView>
+                            <tableView hidden="YES" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="22" sectionFooterHeight="22" id="sK0-HX-Vig">
+                                <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <connections>
+                                    <outlet property="dataSource" destination="vXZ-lx-hvc" id="7ax-XC-DwB"/>
+                                    <outlet property="delegate" destination="vXZ-lx-hvc" id="dkC-kY-2pg"/>
+                                </connections>
+                            </tableView>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                     </view>
                     <navigationItem key="navigationItem" id="L1d-5G-0UF"/>
                     <connections>
-                        <outlet property="tableView" destination="96q-wz-gQ8" id="dtI-yX-mxV"/>
+                        <outlet property="inboxTableView" destination="96q-wz-gQ8" id="CaM-xc-cIz"/>
+                        <outlet property="threadTableView" destination="sK0-HX-Vig" id="tgd-UP-hut"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="x5A-6p-PRh" sceneMemberID="firstResponder"/>

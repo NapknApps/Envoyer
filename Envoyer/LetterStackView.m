@@ -36,7 +36,8 @@ const int MAX_LETTER_COUNT = 5;
     self.letterViews = nil;
     
     self.clipsToBounds = NO;
-    
+    self.backgroundColor = [UIColor clearColor];
+
     int firstLetterWidth = self.frame.size.width - 20;
     int firstLetterHeight = self.frame.size.height - 20 - ((MAX_LETTER_COUNT - 1) * SPACING_BETWEEN_LETTERS);
     float percentSmallerHiddenLetters = .0125;
@@ -72,7 +73,6 @@ const int MAX_LETTER_COUNT = 5;
     }
 
     float lettersCount = (float)[self.letterViews count];
-
     int firstLetterWidth = self.frame.size.width - 20;
     int firstLetterHeight = self.frame.size.height - 20 - ((MAX_LETTER_COUNT - 1) * SPACING_BETWEEN_LETTERS);
     float percentSmallerHiddenLetters = .0125;
@@ -96,6 +96,31 @@ const int MAX_LETTER_COUNT = 5;
         
         i++;
     }
+}
+
+- (void)animateOpeningThreadWithLetterHeight:(int)letterHeight
+{
+    int firstLetterWidth = self.frame.size.width - 20;
+    
+    float offset = letterHeight - self.frame.size.height;
+
+    NSLog(@"self.center.y - %f", self.center.y);
+    [UIView animateWithDuration:.7 delay:.2 options:UIViewAnimationOptionCurveEaseInOut animations:^{
+        
+        int i = 0;
+        for (UIView *letter in self.letterViews) {
+            
+            
+            letter.frame = CGRectMake(10, ((letterHeight + 10) * i * -1) - offset - 10, firstLetterWidth, letterHeight);
+            
+            i++;
+        }
+        
+    } completion:^(BOOL finished) {
+        
+    }];
+
+
 }
 
 @end

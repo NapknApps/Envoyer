@@ -11,7 +11,8 @@
 
 @interface ViewController () <UITableViewDataSource, UITableViewDelegate, UIScrollViewDelegate>
 
-@property (weak, nonatomic) IBOutlet UITableView *tableView;
+@property (weak, nonatomic) IBOutlet UITableView *inboxTableView;
+@property (weak, nonatomic) IBOutlet UITableView *threadTableView;
 
 @end
 
@@ -29,33 +30,86 @@
 
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section
 {
-    return 5;
+    if (tableView == self.inboxTableView) {
+        return 5;
+    }
+    else if (tableView == self.threadTableView) {
+        return 0;
+    }
+    return 0;
 }
 
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath
 {
-    LetterStackTableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:@"LetterStackTableViewCell"];
-    
-    return cell;
+    if (tableView == self.inboxTableView) {
+        LetterStackTableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:@"LetterStackTableViewCell"];
+        return cell;
+    }
+    else if (tableView == self.threadTableView) {
+        return nil;
+    }
+    return nil;
 }
 
 - (void)tableView:(UITableView *)tableView willDisplayCell:(LetterStackTableViewCell *)cell forRowAtIndexPath:(NSIndexPath *)indexPath
 {
-    [cell.letterStackView setUpWithLetterCount:5];
+    if (tableView == self.inboxTableView) {
+        [cell.letterStackView setUpWithLetterCount:5];
+    }
+    else if (tableView == self.threadTableView) {
+        
+    }
+}
+
+- (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath
+{
+    if (tableView == self.inboxTableView) {
+        LetterStackTableViewCell *cell = (LetterStackTableViewCell *)[self.inboxTableView cellForRowAtIndexPath:indexPath];
+        
+        
+        LetterStackView *letterStackView = cell.letterStackView;
+
+        CGRect rectOfCellInTableView = [self.inboxTableView rectForRowAtIndexPath:[self.inboxTableView indexPathForCell:cell]];
+        CGRect rectOfCellInSuperview = [self.inboxTableView convertRect:rectOfCellInTableView toView:[self.inboxTableView superview]];
+
+        [self.view addSubview:letterStackView];
+        
+        letterStackView.center = CGPointMake(self.view.center.x, rectOfCellInSuperview.origin.y + (rectOfCellInSuperview.size.height / 2));
+        
+        cell.letterStackView = nil;
+
+        [self.navigationController setNavigationBarHidden:YES animated:YES];
+        
+        [letterStackView animateOpeningThreadWithLetterHeight:self.view.frame.size.height - 40];
+
+        [UIView animateWithDuration:.5 delay:0 options:UIViewAnimationOptionCurveEaseOut animations:^{
+            
+            self.inboxTableView.alpha = 0.0;
+            letterStackView.center = CGPointMake(self.view.center.x, self.view.frame.size.height - (letterStackView.frame.size.height / 2));
+
+        } completion:^(BOOL finished) {
+            
+        }];
+
+    }
+    else if (tableView == self.threadTableView) {
+        
+    }
 }
 
 - (void)scrollViewDidScroll:(UIScrollView *)scrollView
 {
-    for (LetterStackTableViewCell *cell in [self.tableView visibleCells]) {
-        
-        // Get the cell's position on the screen.
-        
-        CGRect rectOfCellInTableView = [self.tableView rectForRowAtIndexPath:[self.tableView indexPathForCell:cell]];
-        CGRect rectOfCellInSuperview = [self.tableView convertRect:rectOfCellInTableView toView:[self.tableView superview]];
-        
-        float positionDownView = rectOfCellInSuperview.origin.y / self.view.frame.size.height;
-        
-        [cell.letterStackView adjustLetterStackWithPercentageDownView:positionDownView];
+    if (scrollView == self.inboxTableView) {
+
+        for (LetterStackTableViewCell *cell in [self.inboxTableView visibleCells]) {
+            
+            CGRect rectOfCellInTableView = [self.inboxTableView rectForRowAtIndexPath:[self.inboxTableView indexPathForCell:cell]];
+            CGRect rectOfCellInSuperview = [self.inboxTableView convertRect:rectOfCellInTableView toView:[self.inboxTableView superview]];
+            
+            float positionDownView = rectOfCellInSuperview.origin.y / self.view.frame.size.height;
+            
+            [cell.letterStackView adjustLetterStackWithPercentageDownView:positionDownView];
+        }
     }
 }
 

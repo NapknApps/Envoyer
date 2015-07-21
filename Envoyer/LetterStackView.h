@@ -12,5 +12,6 @@
 
 - (void)setUpWithLetterCount:(int)letterCount;
 - (void)adjustLetterStackWithPercentageDownView:(float)percentageDownView;
+- (void)animateOpeningThreadWithLetterHeight:(int)letterHeight;
 
 @end
