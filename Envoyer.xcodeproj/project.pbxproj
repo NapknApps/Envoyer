@@ -7,6 +7,27 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		AA1F1C5319E9E92AEBB011AF /* libPods-Envoyer.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 8762C9A13DAEAF652AD99E38 /* libPods-Envoyer.a */; };
+		D30F3E471B5EEC7F002FD1C9 /* Letter.m in Sources */ = {isa = PBXBuildFile; fileRef = D30F3E461B5EEC7F002FD1C9 /* Letter.m */; };
+		D342F89E1B65D43C00822448 /* 765-arrow-left@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = D342F89C1B65D43C00822448 /* 765-arrow-left@2x.png */; };
+		D342F89F1B65D43C00822448 /* 765-arrow-left.png in Resources */ = {isa = PBXBuildFile; fileRef = D342F89D1B65D43C00822448 /* 765-arrow-left.png */; };
+		D342F8A21B65D49200822448 /* 712-reply.png in Resources */ = {isa = PBXBuildFile; fileRef = D342F8A01B65D49200822448 /* 712-reply.png */; };
+		D342F8A31B65D49200822448 /* 712-reply@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = D342F8A11B65D49200822448 /* 712-reply@2x.png */; };
+		D342F8AA1B65D69D00822448 /* x.png in Resources */ = {isa = PBXBuildFile; fileRef = D342F8A81B65D69D00822448 /* x.png */; };
+		D342F8AB1B65D69D00822448 /* x@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = D342F8A91B65D69D00822448 /* x@2x.png */; };
+		D36C99A11B602B9400503238 /* LetterView.m in Sources */ = {isa = PBXBuildFile; fileRef = D36C99A01B602B9400503238 /* LetterView.m */; };
+		D36C99A71B615EF400503238 /* red.png in Resources */ = {isa = PBXBuildFile; fileRef = D36C99A61B615EF400503238 /* red.png */; };
+		D36C99A91B61610A00503238 /* blue.png in Resources */ = {isa = PBXBuildFile; fileRef = D36C99A81B61610A00503238 /* blue.png */; };
+		D36C99AB1B61692800503238 /* TalkingToTheMoon.ttf in Resources */ = {isa = PBXBuildFile; fileRef = D36C99AA1B61688D00503238 /* TalkingToTheMoon.ttf */; };
+		D36C99AE1B62C9C200503238 /* TwitterAuthHelper.m in Sources */ = {isa = PBXBuildFile; fileRef = D36C99AC1B62C9C200503238 /* TwitterAuthHelper.m */; };
+		D36C99B01B62C9D600503238 /* Accounts.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D36C99AF1B62C9D600503238 /* Accounts.framework */; };
+		D36C99B21B62C9DB00503238 /* Social.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D36C99B11B62C9DB00503238 /* Social.framework */; };
+		D36C99B51B62CA3900503238 /* AccountViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = D36C99B41B62CA3900503238 /* AccountViewController.m */; };
+		D36C99B81B62CCDE00503238 /* FirebaseHelper.m in Sources */ = {isa = PBXBuildFile; fileRef = D36C99B71B62CCDE00503238 /* FirebaseHelper.m */; };
+		D379A54F1B6536600049D4FD /* DefaultsHelper.m in Sources */ = {isa = PBXBuildFile; fileRef = D379A54E1B6536600049D4FD /* DefaultsHelper.m */; };
+		D379A5511B6540020049D4FD /* orange.png in Resources */ = {isa = PBXBuildFile; fileRef = D379A5501B6540020049D4FD /* orange.png */; };
+		D379A5531B6545BD0049D4FD /* TwitterLogo_#55acee.png in Resources */ = {isa = PBXBuildFile; fileRef = D379A5521B6545BD0049D4FD /* TwitterLogo_#55acee.png */; };
+		D39E6EFC1B6560B8001F990A /* IntroViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = D39E6EFB1B6560B8001F990A /* IntroViewController.m */; };
 		D3EBA7611B5D8FF800F6A203 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = D3EBA7601B5D8FF800F6A203 /* main.m */; };
 		D3EBA7641B5D8FF800F6A203 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = D3EBA7631B5D8FF800F6A203 /* AppDelegate.m */; };
 		D3EBA7671B5D8FF800F6A203 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = D3EBA7661B5D8FF800F6A203 /* ViewController.m */; };
@@ -30,6 +51,36 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		08F8154F692D9C5F99B73181 /* Pods-Envoyer.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Envoyer.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Envoyer/Pods-Envoyer.debug.xcconfig"; sourceTree = "<group>"; };
+		2311E126ED4F2ABF152BA496 /* Pods-Envoyer.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Envoyer.release.xcconfig"; path = "Pods/Target Support Files/Pods-Envoyer/Pods-Envoyer.release.xcconfig"; sourceTree = "<group>"; };
+		8762C9A13DAEAF652AD99E38 /* libPods-Envoyer.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-Envoyer.a"; sourceTree = BUILT_PRODUCTS_DIR; };
+		D30F3E451B5EEC7F002FD1C9 /* Letter.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Letter.h; sourceTree = "<group>"; };
+		D30F3E461B5EEC7F002FD1C9 /* Letter.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Letter.m; sourceTree = "<group>"; };
+		D342F89C1B65D43C00822448 /* 765-arrow-left@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "765-arrow-left@2x.png"; sourceTree = "<group>"; };
+		D342F89D1B65D43C00822448 /* 765-arrow-left.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "765-arrow-left.png"; sourceTree = "<group>"; };
+		D342F8A01B65D49200822448 /* 712-reply.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "712-reply.png"; sourceTree = "<group>"; };
+		D342F8A11B65D49200822448 /* 712-reply@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "712-reply@2x.png"; sourceTree = "<group>"; };
+		D342F8A81B65D69D00822448 /* x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = x.png; sourceTree = "<group>"; };
+		D342F8A91B65D69D00822448 /* x@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "x@2x.png"; sourceTree = "<group>"; };
+		D36C999F1B602B9400503238 /* LetterView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LetterView.h; sourceTree = "<group>"; };
+		D36C99A01B602B9400503238 /* LetterView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LetterView.m; sourceTree = "<group>"; };
+		D36C99A61B615EF400503238 /* red.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = red.png; sourceTree = "<group>"; };
+		D36C99A81B61610A00503238 /* blue.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = blue.png; sourceTree = "<group>"; };
+		D36C99AA1B61688D00503238 /* TalkingToTheMoon.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = TalkingToTheMoon.ttf; sourceTree = "<group>"; };
+		D36C99AC1B62C9C200503238 /* TwitterAuthHelper.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TwitterAuthHelper.m; sourceTree = "<group>"; };
+		D36C99AD1B62C9C200503238 /* TwitterAuthHelper.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TwitterAuthHelper.h; sourceTree = "<group>"; };
+		D36C99AF1B62C9D600503238 /* Accounts.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Accounts.framework; path = System/Library/Frameworks/Accounts.framework; sourceTree = SDKROOT; };
+		D36C99B11B62C9DB00503238 /* Social.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Social.framework; path = System/Library/Frameworks/Social.framework; sourceTree = SDKROOT; };
+		D36C99B31B62CA3900503238 /* AccountViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AccountViewController.h; sourceTree = "<group>"; };
+		D36C99B41B62CA3900503238 /* AccountViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AccountViewController.m; sourceTree = "<group>"; };
+		D36C99B61B62CCDE00503238 /* FirebaseHelper.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FirebaseHelper.h; sourceTree = "<group>"; };
+		D36C99B71B62CCDE00503238 /* FirebaseHelper.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FirebaseHelper.m; sourceTree = "<group>"; };
+		D379A54D1B6536600049D4FD /* DefaultsHelper.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DefaultsHelper.h; sourceTree = "<group>"; };
+		D379A54E1B6536600049D4FD /* DefaultsHelper.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DefaultsHelper.m; sourceTree = "<group>"; };
+		D379A5501B6540020049D4FD /* orange.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = orange.png; sourceTree = "<group>"; };
+		D379A5521B6545BD0049D4FD /* TwitterLogo_#55acee.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "TwitterLogo_#55acee.png"; sourceTree = "<group>"; };
+		D39E6EFA1B6560B8001F990A /* IntroViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = IntroViewController.h; sourceTree = "<group>"; };
+		D39E6EFB1B6560B8001F990A /* IntroViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = IntroViewController.m; sourceTree = "<group>"; };
 		D3EBA75B1B5D8FF800F6A203 /* Envoyer.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Envoyer.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		D3EBA75F1B5D8FF800F6A203 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		D3EBA7601B5D8FF800F6A203 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
@@ -56,6 +107,9 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				D36C99B21B62C9DB00503238 /* Social.framework in Frameworks */,
+				D36C99B01B62C9D600503238 /* Accounts.framework in Frameworks */,
+				AA1F1C5319E9E92AEBB011AF /* libPods-Envoyer.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -69,12 +123,33 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		42EBFAA79DEED4316589DC96 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				8762C9A13DAEAF652AD99E38 /* libPods-Envoyer.a */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		A2931F62B59BAE1A4447B06F /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				08F8154F692D9C5F99B73181 /* Pods-Envoyer.debug.xcconfig */,
+				2311E126ED4F2ABF152BA496 /* Pods-Envoyer.release.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
 		D3EBA7521B5D8FF700F6A203 = {
 			isa = PBXGroup;
 			children = (
+				D36C99B11B62C9DB00503238 /* Social.framework */,
+				D36C99AF1B62C9D600503238 /* Accounts.framework */,
 				D3EBA75D1B5D8FF800F6A203 /* Envoyer */,
 				D3EBA7771B5D8FF800F6A203 /* EnvoyerTests */,
 				D3EBA75C1B5D8FF800F6A203 /* Products */,
+				A2931F62B59BAE1A4447B06F /* Pods */,
+				42EBFAA79DEED4316589DC96 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -94,13 +169,38 @@
 				D3EBA7631B5D8FF800F6A203 /* AppDelegate.m */,
 				D3EBA7651B5D8FF800F6A203 /* ViewController.h */,
 				D3EBA7661B5D8FF800F6A203 /* ViewController.m */,
+				D39E6EFA1B6560B8001F990A /* IntroViewController.h */,
+				D39E6EFB1B6560B8001F990A /* IntroViewController.m */,
 				D3EBA7681B5D8FF800F6A203 /* Main.storyboard */,
+				D36C99B31B62CA3900503238 /* AccountViewController.h */,
+				D36C99B41B62CA3900503238 /* AccountViewController.m */,
 				D3EBA7841B5D929100F6A203 /* LetterStackTableViewCell.h */,
 				D3EBA7851B5D929100F6A203 /* LetterStackTableViewCell.m */,
 				D3EBA7871B5D92C400F6A203 /* LetterStackView.h */,
 				D3EBA7881B5D92C400F6A203 /* LetterStackView.m */,
+				D36C999F1B602B9400503238 /* LetterView.h */,
+				D36C99A01B602B9400503238 /* LetterView.m */,
+				D36C99B61B62CCDE00503238 /* FirebaseHelper.h */,
+				D36C99B71B62CCDE00503238 /* FirebaseHelper.m */,
+				D379A54D1B6536600049D4FD /* DefaultsHelper.h */,
+				D379A54E1B6536600049D4FD /* DefaultsHelper.m */,
 				D3EBA78A1B5D967800F6A203 /* Helper.h */,
 				D3EBA78B1B5D967800F6A203 /* Helper.m */,
+				D30F3E451B5EEC7F002FD1C9 /* Letter.h */,
+				D30F3E461B5EEC7F002FD1C9 /* Letter.m */,
+				D36C99AD1B62C9C200503238 /* TwitterAuthHelper.h */,
+				D36C99AC1B62C9C200503238 /* TwitterAuthHelper.m */,
+				D342F8A01B65D49200822448 /* 712-reply.png */,
+				D342F8A11B65D49200822448 /* 712-reply@2x.png */,
+				D342F89C1B65D43C00822448 /* 765-arrow-left@2x.png */,
+				D342F89D1B65D43C00822448 /* 765-arrow-left.png */,
+				D342F8A81B65D69D00822448 /* x.png */,
+				D342F8A91B65D69D00822448 /* x@2x.png */,
+				D379A5501B6540020049D4FD /* orange.png */,
+				D36C99A61B615EF400503238 /* red.png */,
+				D36C99A81B61610A00503238 /* blue.png */,
+				D36C99AA1B61688D00503238 /* TalkingToTheMoon.ttf */,
+				D379A5521B6545BD0049D4FD /* TwitterLogo_#55acee.png */,
 				D3EBA76B1B5D8FF800F6A203 /* Images.xcassets */,
 				D3EBA76D1B5D8FF800F6A203 /* LaunchScreen.xib */,
 				D3EBA75E1B5D8FF800F6A203 /* Supporting Files */,
@@ -141,9 +241,11 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = D3EBA77E1B5D8FF800F6A203 /* Build configuration list for PBXNativeTarget "Envoyer" */;
 			buildPhases = (
+				67AF2512ECDD3CC49996745E /* Check Pods Manifest.lock */,
 				D3EBA7571B5D8FF800F6A203 /* Sources */,
 				D3EBA7581B5D8FF800F6A203 /* Frameworks */,
 				D3EBA7591B5D8FF800F6A203 /* Resources */,
+				6AFC2CC3F38DBD0700DF47B3 /* Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -214,9 +316,20 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				D342F8A31B65D49200822448 /* 712-reply@2x.png in Resources */,
+				D342F8AA1B65D69D00822448 /* x.png in Resources */,
+				D379A5531B6545BD0049D4FD /* TwitterLogo_#55acee.png in Resources */,
 				D3EBA76A1B5D8FF800F6A203 /* Main.storyboard in Resources */,
 				D3EBA76F1B5D8FF800F6A203 /* LaunchScreen.xib in Resources */,
+				D36C99A71B615EF400503238 /* red.png in Resources */,
 				D3EBA76C1B5D8FF800F6A203 /* Images.xcassets in Resources */,
+				D342F8AB1B65D69D00822448 /* x@2x.png in Resources */,
+				D342F89E1B65D43C00822448 /* 765-arrow-left@2x.png in Resources */,
+				D342F8A21B65D49200822448 /* 712-reply.png in Resources */,
+				D342F89F1B65D43C00822448 /* 765-arrow-left.png in Resources */,
+				D36C99A91B61610A00503238 /* blue.png in Resources */,
+				D36C99AB1B61692800503238 /* TalkingToTheMoon.ttf in Resources */,
+				D379A5511B6540020049D4FD /* orange.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -229,6 +342,39 @@
 		};
 /* End PBXResourcesBuildPhase section */
 
+/* Begin PBXShellScriptBuildPhase section */
+		67AF2512ECDD3CC49996745E /* Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Check Pods Manifest.lock";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [[ $? != 0 ]] ; then\n    cat << EOM\nerror: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\nEOM\n    exit 1\nfi\n";
+			showEnvVarsInLog = 0;
+		};
+		6AFC2CC3F38DBD0700DF47B3 /* Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-Envoyer/Pods-Envoyer-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
 /* Begin PBXSourcesBuildPhase section */
 		D3EBA7571B5D8FF800F6A203 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
@@ -236,10 +382,17 @@
 			files = (
 				D3EBA7671B5D8FF800F6A203 /* ViewController.m in Sources */,
 				D3EBA78C1B5D967800F6A203 /* Helper.m in Sources */,
+				D36C99A11B602B9400503238 /* LetterView.m in Sources */,
 				D3EBA7641B5D8FF800F6A203 /* AppDelegate.m in Sources */,
+				D36C99B51B62CA3900503238 /* AccountViewController.m in Sources */,
+				D36C99AE1B62C9C200503238 /* TwitterAuthHelper.m in Sources */,
+				D30F3E471B5EEC7F002FD1C9 /* Letter.m in Sources */,
 				D3EBA7861B5D929100F6A203 /* LetterStackTableViewCell.m in Sources */,
+				D36C99B81B62CCDE00503238 /* FirebaseHelper.m in Sources */,
+				D39E6EFC1B6560B8001F990A /* IntroViewController.m in Sources */,
 				D3EBA7611B5D8FF800F6A203 /* main.m in Sources */,
 				D3EBA7891B5D92C400F6A203 /* LetterStackView.m in Sources */,
+				D379A54F1B6536600049D4FD /* DefaultsHelper.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -363,25 +516,29 @@
 		};
 		D3EBA77F1B5D8FF800F6A203 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 08F8154F692D9C5F99B73181 /* Pods-Envoyer.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				CODE_SIGN_IDENTITY = "iPhone Developer: Zach Whelchel (2AS274DVPG)";
+				CODE_SIGN_IDENTITY = "iPhone Distribution: Napkn, Ltd. Co. (SWECN289V2)";
 				INFOPLIST_FILE = Envoyer/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				PROVISIONING_PROFILE = "858f7b3d-ce01-4a1b-a42d-6446358270bd";
+				PROVISIONING_PROFILE = "5404c836-e6e6-475b-8f8e-d7bc0a554d6c";
 			};
 			name = Debug;
 		};
 		D3EBA7801B5D8FF800F6A203 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 2311E126ED4F2ABF152BA496 /* Pods-Envoyer.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				CODE_SIGN_IDENTITY = "iPhone Developer: Zach Whelchel (2AS274DVPG)";
+				CODE_SIGN_IDENTITY = "iPhone Distribution: Napkn, Ltd. Co. (SWECN289V2)";
 				INFOPLIST_FILE = Envoyer/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				PROVISIONING_PROFILE = "858f7b3d-ce01-4a1b-a42d-6446358270bd";
+				PROVISIONING_PROFILE = "5404c836-e6e6-475b-8f8e-d7bc0a554d6c";
 			};
 			name = Release;
 		};
@@ -438,6 +595,7 @@
 				D3EBA7801B5D8FF800F6A203 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		D3EBA7811B5D8FF800F6A203 /* Build configuration list for PBXNativeTarget "EnvoyerTests" */ = {
 			isa = XCConfigurationList;
@@ -446,6 +604,7 @@
 				D3EBA7831B5D8FF800F6A203 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
