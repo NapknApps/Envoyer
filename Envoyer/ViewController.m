@@ -173,6 +173,7 @@
     // To reset manually when testing:
     //[[FirebaseHelper baseFirebaseReference] unauth];
     
+    self.title = [DefaultsHelper userHandle];
     
     self.inboxTableView.hidden = YES;
 
@@ -200,9 +201,9 @@
 }
 
 
-- (void)letterStackViewDidCloseThread:(LetterStackView *)letterStackView withTwitterNameToSendTo:(NSString *)twitterNameToSendTo
+- (void)letterStackViewDidCloseThread:(LetterStackView *)letterStackView withUsernameToSendTo:(NSString *)usernameToSendTo
 {
-    [self addSelectedWithPrefilTo:twitterNameToSendTo];
+    [self addSelectedWithPrefilTo:usernameToSendTo];
 }
 
 - (IBAction)addSelectedWithPrefilTo:(NSString *)prefilTo
@@ -222,6 +223,9 @@
                                    action:@selector(cancelSelected)];
     self.navigationItem.leftBarButtonItem = cancelButton;
 
+    self.title = nil;
+
+    
     
     [UIView animateWithDuration:.3 delay:0.0 options:UIViewAnimationOptionCurveEaseOut animations:^{
         
@@ -240,21 +244,18 @@
         self.composingLetterView.fromTextField.autocapitalizationType = UITextAutocapitalizationTypeNone;
         self.composingLetterView.fromTextField.autocorrectionType = UITextAutocorrectionTypeNo;
 
-        self.composingLetterView.fromTextField.placeholder = @"To: (twitter username)";
+        self.composingLetterView.fromTextField.placeholder = @"To: (friend's username)";
         
-        
+
         if ([prefilTo isKindOfClass:[NSString class]]) {
             [self.composingLetterView.fromTextField setText:prefilTo];
         }
         
-        
 //        self.composingLetterView.contentTextView.backgroundColor = [UIColor redColor];
         
-
         self.composingLetterView.contentTextView.userInteractionEnabled = YES;
         self.composingLetterView.contentTextView.editable = YES;
         self.composingLetterView.contentTextView.hidden = NO;
-
         
         self.composingLetterView.backgroundColor = [UIColor colorWithWhite:.9 alpha:1.0];
         
@@ -265,11 +266,9 @@
             
             self.composingLetterView.center = CGPointMake(self.composingLetterView.center.x, self.view.center.y - 66);
             
-
         } completion:^(BOOL finished) {
             
-            
-            [self.composingLetterView.fromTextField becomeFirstResponder];
+            [self.composingLetterView.contentTextView becomeFirstResponder];
 
         }];
 
@@ -303,6 +302,8 @@
         
         self.navigationItem.leftBarButtonItem = nil;
         
+        self.title = [DefaultsHelper userHandle];
+
     }];
 
 }
@@ -316,21 +317,20 @@
         
         
         if (self.composingLetterView.contentTextView.text.length > 10) {
-            NSString *senderTwitterHandle = [DefaultsHelper userTwitterHandle];
-            NSString *receiverTwitterHandle = self.composingLetterView.fromTextField.text;
+            NSString *senderHandle = [DefaultsHelper userHandle];
+            NSString *receiverHandle = self.composingLetterView.fromTextField.text;
             
             Firebase *ref = [[FirebaseHelper baseFirebaseReference] childByAppendingPath:@"user-handles"];
             
-            [[[ref queryOrderedByChild:@"twitter_handle"] queryEqualToValue:receiverTwitterHandle] observeSingleEventOfType:FEventTypeValue withBlock:^(FDataSnapshot *snapshot) {
-                 
-                 
+            [[[ref queryOrderedByChild:@"user_handle"] queryEqualToValue:receiverHandle] observeSingleEventOfType:FEventTypeValue withBlock:^(FDataSnapshot *snapshot) {
+                
                  if (snapshot.value == [NSNull null]) {
                      // The value is null
                      
                      
                      UIAlertController *alertController = [UIAlertController
                                                            alertControllerWithTitle:@"No User Found"
-                                                           message:@"Perhaps you entered your friend's twitter handle incorrectly... or perhaps they haven't signed into Envoyer yet."
+                                                           message:@"Perhaps you entered your friend's Envoyer username incorrectly."
                                                            preferredStyle:UIAlertControllerStyleAlert];
                      
                      UIAlertAction *cancelAction = [UIAlertAction
@@ -355,17 +355,17 @@
                          
                          
                          NSDate *dateToReceive = [[NSDate date] dateByAddingTimeInterval:60 * 60 * 24 * 3];
-                         
-                         
+//                         NSDate *dateToReceive = [[NSDate date] dateByAddingTimeInterval:0];
+
                          
                          Firebase *ref = [[FirebaseHelper baseFirebaseReference] childByAppendingPath:[NSString stringWithFormat:@"messages/%@/%@", uidSendingTo, [FirebaseHelper userUID]]];
                          
                          ref = [ref childByAutoId];
                          
                          NSDictionary *info = @{
-                                                @"sender": senderTwitterHandle,
+                                                @"sender": senderHandle,
                                                 @"senderUID": [FirebaseHelper userUID],
-                                                @"receiver": receiverTwitterHandle,
+                                                @"receiver": receiverHandle,
                                                 @"content": self.composingLetterView.contentTextView.text,
                                                 @"receiveDate": [NSNumber numberWithInt:[dateToReceive timeIntervalSince1970]],
                                                 @"origionalReceiveDate": [NSNumber numberWithInt:[dateToReceive timeIntervalSince1970]]
@@ -376,7 +376,7 @@
                          for (NSArray *letterStack in self.letterStacks) {
                              for (Letter *letter in letterStack) {
                                  
-                                 if ([letter.senderUID isEqualToString:uidSendingTo] || [letter.receiver isEqualToString:receiverTwitterHandle]) {
+                                 if ([letter.senderUID isEqualToString:uidSendingTo] || [letter.receiver isEqualToString:receiverHandle]) {
                                      
                                      // ok so we posess a letter that is from the send we are sending to so send it back also...
                                      // and delete it from ours
@@ -416,6 +416,8 @@
                          
                          self.navigationItem.leftBarButtonItem = nil;
                          
+                         self.title = [DefaultsHelper userHandle];
+
                      }];
                      
                      

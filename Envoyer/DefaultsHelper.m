@@ -8,19 +8,19 @@
 
 #import "DefaultsHelper.h"
 
-#define kUserTwitterHandle @"kUserTwitterHandle"
+#define kUserHandle @"kUserHandle"
 #define kIntroShown @"kIntroShown"
 
 @implementation DefaultsHelper
 
-+ (NSString *)userTwitterHandle
++ (NSString *)userHandle
 {
-    return [[NSUserDefaults standardUserDefaults] objectForKey:kUserTwitterHandle];
+    return [[NSUserDefaults standardUserDefaults] objectForKey:kUserHandle];
 }
 
-+ (void)setUserTwitterHandle:(NSString *)userTwitterHandle
++ (void)setUserHandle:(NSString *)userHandle
 {
-    [[NSUserDefaults standardUserDefaults] setObject:userTwitterHandle forKey:kUserTwitterHandle];
+    [[NSUserDefaults standardUserDefaults] setObject:userHandle forKey:kUserHandle];
     [[NSUserDefaults standardUserDefaults] synchronize];
 }
 

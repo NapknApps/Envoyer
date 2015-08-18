@@ -10,8 +10,8 @@
 
 @interface DefaultsHelper : NSObject
 
-+ (NSString *)userTwitterHandle;
-+ (void)setUserTwitterHandle:(NSString *)userTwitterHandle;
++ (NSString *)userHandle;
++ (void)setUserHandle:(NSString *)userHandle;
 
 + (BOOL)introShown;
 + (void)setIntroShown;

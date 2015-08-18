@@ -16,7 +16,7 @@
 @required
 
 - (void)letterStackViewDidCloseThread:(LetterStackView *)letterStackView;
-- (void)letterStackViewDidCloseThread:(LetterStackView *)letterStackView withTwitterNameToSendTo:(NSString *)twitterNameToSendTo;
+- (void)letterStackViewDidCloseThread:(LetterStackView *)letterStackView withUsernameToSendTo:(NSString *)usernameToSendTo;
 
 @end
 

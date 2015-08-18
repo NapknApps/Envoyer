@@ -326,14 +326,14 @@ const int MAX_LETTER_COUNT = 5;
     
     NSString *to;
     
-    if ([[DefaultsHelper userTwitterHandle] isEqualToString:letter.sender]) {
+    if ([[DefaultsHelper userHandle] isEqualToString:letter.sender]) {
         to = letter.receiver;
     }
     else {
         to = letter.sender;
     }
     
-    [self.delegate letterStackViewDidCloseThread:self withTwitterNameToSendTo:to];
+    [self.delegate letterStackViewDidCloseThread:self withUsernameToSendTo:to];
 }
 
 
